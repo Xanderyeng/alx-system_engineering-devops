@@ -1,0 +1,2 @@
+#!/bin/bash
+echo "Chronic Cold" | tr -d 'cC'
