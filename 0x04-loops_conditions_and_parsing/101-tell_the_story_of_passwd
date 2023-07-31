@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Path to the file
+file_path="/etc/passwd"
+
+# Read the file line by line using a while loop and IFS
+while IFS=: read -r username password uid gid user_info home_path shell; do
+  # Extract user ID info from the user_info field
+  IFS=',' read -ra user_id_info <<< "$user_info"
+  user_id_info="${user_id_info[0]}"
+
+  # Print the required information
+  echo "The user $username is part of the $gid gang, lives in $home_path and rides $shell."
+  echo "User ID's place is protected by the passcode $password, more info about the user here: $user_id_info"
+done < "$file_path"
