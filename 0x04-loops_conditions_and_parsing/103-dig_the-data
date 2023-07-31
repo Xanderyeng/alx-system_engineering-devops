@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 
 # Use awk to extract IP and HTTP status code from Apache log file
-awk '{print $1, $9}' apache-access.log |
+#awk '{print $1, $9}' apache-access.log |
 # Use sort and uniq to count occurrences and group by IP and HTTP status code
-sort | uniq -c |
+#sort | uniq -c |
 # Use awk again to format the output
-awk '{print $1, $2, $3}' |
+#awk '{print $1, $2, $3}' |
 # Use sort again to order by the greatest to lowest number of occurrences
-sort -nr
+#sort -nr
+awk '{print $1,$9}' apache-access.log | sort | uniq -c | sort -nr
