@@ -1,0 +1,4 @@
+host 54.157.149.96
+	user ubuntu
+	IndetifyFile ~/.ssh/school
+	PasswordAuthentication no
