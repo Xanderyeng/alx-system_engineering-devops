@@ -1,9 +1,2 @@
 #!/usr/bin/env bash
-
-# Server details
-server_ip="54.157.149.96"
-user="ubuntu"
-private_key_path="~/.ssh/school"
-
-# Connect to the server using ssh
-ssh -i "$private_key_path" "$user"@"$server_ip"
+ssh -i ~/.ssh/school ubuntu@54.157.149.96
