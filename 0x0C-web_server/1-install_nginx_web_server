@@ -9,7 +9,7 @@ sudo apt-get -y install nginx
 
 # Create a custom Nginx configuration to return "Hello World!" on the root path
 echo "server {
-    listen 80;
+    listen 80 default server;
     server_name _;
 
     location / {
