@@ -21,4 +21,4 @@ echo "server {
 
 # Restart Nginx to apply the new configuration
 
-sudo service nginx restart
+sudo service nginx start
