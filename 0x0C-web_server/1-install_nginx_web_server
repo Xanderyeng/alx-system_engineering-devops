@@ -9,16 +9,16 @@ sudo apt-get -y install nginx
 
 # Create a custom Nginx configuration to return "Hello World!" on the root path
 echo "server {
-    listen 80 default server;
+    listen 80;
     server_name _;
 
     location / {
-        index index.html;
+        return 200 'Hello World!';
     }
-}" | sudo tee /etc/nginx/sites-enabled/default > /dev/null
+}" | sudo tee /etc/nginx/sites-available/default > /dev/null
 
-echo "Hello World!" | sudo tee /var/www/html/index.html
+#echo "Hello World!" | sudo tee /var/www/html/index.html
 
 # Restart Nginx to apply the new configuration
 
-sudo service nginx restart
+sudo service nginx start
