@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# debbug nginx fail connection to port 80
+sudo sed -i  's/8080/80/' /etc/nginx/sites-enabled/default
+service nginx restart
