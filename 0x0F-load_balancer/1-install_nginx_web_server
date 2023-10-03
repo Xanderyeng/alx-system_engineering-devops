@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Update the package list to ensure we have the latest information
+sudo apt-get update
+
+# Install nginx on the server
+sudo apt-get update
+
+sudo apt-get install nginx
+
+# Create a custom Nginx configuration to return "Hello World!" on the root path
+
+sudo echo "Hello World!" | sudo tee /var/www/html/index.html
+
+# Restart Nginx to apply the new configuration
+
+sudo service nginx start
