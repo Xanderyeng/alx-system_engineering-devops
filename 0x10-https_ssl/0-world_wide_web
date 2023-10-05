@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# shellcheck disable=SC2116
+# function that returns the information of the subdomains
+
+get_info_subdomains() {
+    # show the information about the subdomains
+    SUBDOMAINS=("www" "lb-01" "web-01" "web-02") 
+    if [ -z "$2" ];
+    then
+        for i in "${SUBDOMAINS[@]}";
+        do
+        dig "$i.$1" | grep -A1 'ANSWER SECTION:'| tail -n 1 | awk '{split($0, SUBD, "."); print "The subdomain " SUBD[1] " is a " $4 " record and points to " $5}'
+        done
+    else
+        dig "$2.$1" | grep -A1 'ANSWER SECTION:'| tail -n 1 | awk '{split($0, SUBD, "."); print "The subdomain " SUBD[1] " is a " $4 " record and points to " $5}'
+    fi
+}
+
+get_info_subdomains "$1" "$2"
