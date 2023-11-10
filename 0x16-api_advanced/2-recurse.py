@@ -13,7 +13,7 @@ import requests
 
 def recurse(subreddit, hot_list=[], after=''):
     url = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
-    req = requests.get(url, headers={'User-agent': 'Carlos'},
+    req = requests.get(url, headers={'User-agent': 'Xander'},
                        allow_redirects=False, params={'after': after})
     if req.status_code == 200:
         after = req.json().get('data').get('after')
