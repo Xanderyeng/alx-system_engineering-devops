@@ -80,17 +80,15 @@ See the codes of different functions and programs.
 
 ## Team
 
-https://github.com/Charliemur2
+https://github.com/xanderyeng
 ---
 
 ## Support
 
 Feel free to contact me!
 
-- GitHub at <a href="https://github.com/Charliemur2">`Charliemur2`</a>
+- GitHub at <a href="https://github.com/xanderyeng">`xanderyeng`</a>
 - Twitter at <a href="https://twitter.com/charliesoka">`@charliesoka`</a>
-- Insert more social links here.
-
 ---
 
 ## License
